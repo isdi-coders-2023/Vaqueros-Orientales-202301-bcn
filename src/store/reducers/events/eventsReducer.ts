@@ -1,9 +1,10 @@
 import { EventsStructure } from "../../../data/types";
 import { EventsActionType, loadEventsAction } from "../../actions/events/types";
+import { EventsAction } from "../../actions/events/types";
 
 const eventsReducer = (
   currentEvent: EventsStructure,
-  action: loadEventsAction
+  action: EventsAction
 ): EventsStructure => {
   let newEvents: EventsStructure;
 
