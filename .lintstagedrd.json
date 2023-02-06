@@ -1,4 +1,0 @@
-{
-  ".{ts,tsx}": "eslint --ignore-path .gitignore . --max-warnings 0",
-  ".{ts,css,json,md,tsx}": "prettier --write"
-}
