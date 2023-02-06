@@ -11,6 +11,6 @@ export interface EventsAction{
 
 }
 
-export interface loadEvents extends EventsAction{
+export interface loadEventsAction extends EventsAction{
   payload: EventsStructure
 }
