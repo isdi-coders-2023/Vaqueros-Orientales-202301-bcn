@@ -1,4 +1,4 @@
-import {EventStructure, EventsStructure} from "../../../data/types"
+import {EventsStructure} from "../../../data/types"
 
 
 export enum EventsActionType{
