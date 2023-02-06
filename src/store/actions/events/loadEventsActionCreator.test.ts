@@ -32,7 +32,6 @@ describe("Given a loadEventsAction function", () => {
         type: EventsActionType.loadEvents,
         payload: events,
       };
-
       const loadEventsAction = loadEventsActionCreator(events);
 
       expect(loadEventsAction).toStrictEqual(expectedLoadEventsAction);
