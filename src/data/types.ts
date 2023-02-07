@@ -2,11 +2,10 @@ export interface EventStructure {
   name: string;
   id: number;
   type: string;
-  image: [{ url: string; width: number; height: number }];
-  date: [];
-  price: [min: number];
+  image: string;
+  address: string;
+  price: number;
   location: string;
-  address: { [{ string }] };
 
   time: string;
 }
