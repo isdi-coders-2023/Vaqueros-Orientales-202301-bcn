@@ -5,30 +5,42 @@ import eventsReducer from "./eventsReducer";
 describe("Given the eventReducer", () => {
   describe("When it receives an unkwnon action", () => {
     test("Then it should return the initial state", () => {
-      const initialState = [
+      const initialState: EventsStructure = [
         {
-          name: "",
-          id: 1,
+          name: "Opera",
+          id: "",
           type: "",
-          url: "",
-          address: "",
-          city: "",
-          country: "",
-          price: 100,
-          date: "",
-          time: "",
+          images: [{ url: "" }],
+          _embedded: {
+            venues: [
+              {
+                name: "",
+                city: { name: "" },
+                country: { name: "" },
+                address: { line1: "" },
+              },
+            ],
+          },
+          priceRanges: [{ min: 300 }],
+          dates: { start: { localDate: "", localTime: "" } },
         },
         {
-          name: "",
-          id: 1,
+          name: "Cinema",
+          id: "",
           type: "",
-          url: "",
-          address: "",
-          city: "",
-          country: "",
-          price: 200,
-          date: "",
-          time: "",
+          images: [{ url: "" }],
+          _embedded: {
+            venues: [
+              {
+                name: "",
+                city: { name: "" },
+                country: { name: "" },
+                address: { line1: "" },
+              },
+            ],
+          },
+          priceRanges: [{ min: 10 }],
+          dates: { start: { localDate: "", localTime: "" } },
         },
       ];
 
@@ -45,28 +57,40 @@ describe("Given the eventReducer", () => {
         type: EventsActionType.loadEvents,
         payload: [
           {
-            name: "",
-            id: 3,
+            name: "Opera",
+            id: "",
             type: "",
-            url: "",
-            address: "",
-            city: "",
-            country: "",
-            price: 100,
-            date: "",
-            time: "",
+            images: [{ url: "" }],
+            _embedded: {
+              venues: [
+                {
+                  name: "",
+                  city: { name: "" },
+                  country: { name: "" },
+                  address: { line1: "" },
+                },
+              ],
+            },
+            priceRanges: [{ min: 300 }],
+            dates: { start: { localDate: "", localTime: "" } },
           },
           {
-            name: "",
-            id: 4,
+            name: "Opera",
+            id: "",
             type: "",
-            url: "",
-            address: "",
-            city: "",
-            country: "",
-            price: 200,
-            date: "",
-            time: "",
+            images: [{ url: "" }],
+            _embedded: {
+              venues: [
+                {
+                  name: "",
+                  city: { name: "" },
+                  country: { name: "" },
+                  address: { line1: "" },
+                },
+              ],
+            },
+            priceRanges: [{ min: 300 }],
+            dates: { start: { localDate: "", localTime: "" } },
           },
         ],
       };
