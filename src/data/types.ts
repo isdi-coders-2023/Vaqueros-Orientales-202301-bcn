@@ -13,7 +13,20 @@ export interface EventStructure {
 
 export interface ApiResponseStructure {
   _embedded: {
-    events: [EventStructure];
+    events: [
+      {
+        name: string;
+        id: number;
+        type: string;
+        url: { images: { url: string } };
+        address: { _embedded: [venues: { name: string }] };
+        city: { _embedded: [venues: { city: { name: string } }] };
+        country: { _embedded: [venues: { country: string }] };
+        price: [priceRanges: { min: number }];
+        date: { start: { localDate: number } };
+        time: { start: { localTime: number } };
+      }
+    ];
   };
 }
 
