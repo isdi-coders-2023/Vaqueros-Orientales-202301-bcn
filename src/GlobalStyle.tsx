@@ -1,33 +1,37 @@
 import { createGlobalStyle } from "styled-components";
-import "../node_modules/@fontsource/montserrat-alternates/index.css";
+import "../node_modules/@fontsource/montserrat-alternates/500.css";
+import "../node_modules/@fontsource/montserrat-alternates/700.css";
 
 const GlobalStyle = createGlobalStyle`
 
-  *{
+  * {
     box-sizing:border-box;
     margin:0;
     padding:0;
   }
 
-  html{
+  html {
     font-size: 62.5%;
+    font-weight: 500;
+    font-family: "Montserrat Alternates";
+    color: #333333;
   }
 
-  body{
+  body {
     background-color: #FFFDFC;
-    font-family: "Montserrat Alternates";
   }
   
   ol, ul {
     list-style: none;
   }
 
-  button{
+  button {
     border:none;
+    background:none;
     font-family: inherit;
   }
 
-  input{
+  input {
     border:none;
     font-family:inherit;
   }
