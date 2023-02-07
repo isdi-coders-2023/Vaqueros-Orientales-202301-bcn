@@ -70,6 +70,7 @@ describe("Given the eventReducer", () => {
           },
         ],
       };
+
       const newState = eventsReducer(initialState, action);
 
       expect(newState.length).toBe(2);
