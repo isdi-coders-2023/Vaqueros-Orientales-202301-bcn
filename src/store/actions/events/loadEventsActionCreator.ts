@@ -1,8 +1,9 @@
-
 import { EventsStructure } from "../../../data/types";
-import { EventsActionType, loadEventsAction } from "./types";
+import { EventsActionType, LoadEventsAction } from "./types";
 
-export const loadEventsActionCreator = (events: EventsStructure): loadEventsAction => ({
-  type: EventsActionType.loadEvents, 
+export const loadEventsActionCreator = (
+  events: EventsStructure
+): LoadEventsAction => ({
+  type: EventsActionType.loadEvents,
   payload: events,
-})
+});

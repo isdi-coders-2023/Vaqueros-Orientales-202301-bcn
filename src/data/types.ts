@@ -1,12 +1,13 @@
 export interface EventStructure {
+  name: string;
   id: number;
-  type: string, 
-  name: string,
-  image: string,
-  price: number,
-  address: string,
-  location: string,
-  time: string,
+  type: string;
+  image: string;
+  address: string;
+  price: number;
+  location: string;
+
+  time: string;
 }
 
 export type EventsStructure = EventStructure[];
