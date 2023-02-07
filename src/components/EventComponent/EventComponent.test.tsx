@@ -1,19 +1,27 @@
 import { render, screen } from "@testing-library/react";
+import { EventStructure } from "../../data/types";
 import EventComponent from "./EventComponent";
-import EventComponentStructure from "./types";
 
 describe("Given a EventComponent", () => {
   describe("When it renders with a props called 'name'= SuperBowl", () => {
     test("Then it should show 'SuperBowl'", () => {
-      const event: EventComponentStructure = {
+      const event: EventStructure = {
         name: "SuperBowl",
-        id: 0,
+        id: "0",
         type: "",
-        image: "",
-        address: "",
-        price: 0,
-        location: "",
-        time: "",
+        images: [{ url: "" }],
+        _embedded: {
+          venues: [
+            {
+              name: "",
+              city: { name: "" },
+              country: { name: "" },
+              address: { line1: "" },
+            },
+          ],
+        },
+        priceRanges: [{ min: 0 }],
+        dates: { start: { localDate: "", localTime: "" } },
       };
       const name = "SuperBowl";
 
