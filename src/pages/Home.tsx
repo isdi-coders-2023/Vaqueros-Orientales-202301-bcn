@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
+
 import useApi from "../hooks/useApi";
 
 const Home = (): JSX.Element => {
-  const getEvents = useApi();
+  const { loadEvents } = useApi();
 
   useEffect(() => {
-    (async () => getEvents("music"))();
-  }, [getEvents]);
+    (async () => loadEvents("music"))();
+  }, [loadEvents]);
 
   return <div>Home</div>;
 };

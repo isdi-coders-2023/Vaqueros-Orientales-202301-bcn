@@ -1,8 +1,12 @@
+import Home from "./pages/Home";
+
 import EventComponent from "./components/EventComponent/EventComponent";
 
 const App = (): JSX.Element => {
   return (
     <div className="container">
+      <Home />
+
       <EventComponent
         name={"SuperBowl"}
         image={
