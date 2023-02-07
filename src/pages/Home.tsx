@@ -8,7 +8,7 @@ const Home = (): JSX.Element => {
     (async () => getEvents("music"))();
   }, [getEvents]);
 
-  return <div>home</div>;
+  return <div>Home</div>;
 };
 
 export default Home;
