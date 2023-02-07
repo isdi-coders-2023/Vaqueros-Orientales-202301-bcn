@@ -7,8 +7,8 @@ const eventsReducer = (
 ): EventsStructure => {
   let newEvents: EventsStructure;
 
-  if (EventsActionType.loadEvents) {
-    newEvents = [...(action as LoadEventsAction).payload];
+  if (action.type === EventsActionType.loadEvents) {
+    newEvents = [...action.payload];
   } else {
     newEvents = currentEvent;
   }
