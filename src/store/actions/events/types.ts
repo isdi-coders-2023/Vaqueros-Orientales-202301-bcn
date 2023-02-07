@@ -6,7 +6,7 @@ export enum EventsActionType {
 
 export interface EventsAction {
   type: EventsActionType;
-  payload: unknown;
+  payload?: unknown;
 }
 
 export interface LoadEventsAction extends EventsAction {
