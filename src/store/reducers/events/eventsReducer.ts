@@ -1,14 +1,18 @@
 import { EventsStructure } from "../../../data/types";
-import { EventsActionType, LoadEventsAction } from "../../actions/events/types";
+import {
+  EventsAction,
+  EventsActionType,
+  LoadEventsAction,
+} from "../../actions/events/types";
 
 const eventsReducer = (
   currentEvent: EventsStructure,
-  action: LoadEventsAction
+  action: EventsAction
 ): EventsStructure => {
   let newEvents: EventsStructure;
 
   if (action.type === EventsActionType.loadEvents) {
-    newEvents = [...action.payload];
+    newEvents = [...(action as LoadEventsAction).payload];
   } else {
     newEvents = currentEvent;
   }
