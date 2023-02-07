@@ -12,8 +12,8 @@ const EventComponentStyled = styled.article`
 
     &__button-edit {
       position: absolute;
-      top: 3rem;
-      right: 3rem;
+      top: 2.5rem;
+      right: 2.5rem;
       font-size: 4rem;
       background: white;
       width: 4rem;
@@ -51,19 +51,20 @@ const EventComponentStyled = styled.article`
         margin-top: 1rem;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         .card__info-title {
-          font-size: 3.4rem;
+          max-width: 22rem;
+          font-size: 3.2rem;
           font-weight: bold;
           letter-spacing: -0.02em;
         }
         .card__button-fav {
           font-size: 2rem;
-          justify-self: left;
           background: #333;
           width: 4rem;
           height: 4rem;
           border-radius: 50%;
-          margin-right: 2rem;
+          margin-right: 1rem;
         }
       }
     }
