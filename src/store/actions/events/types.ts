@@ -9,6 +9,6 @@ export interface EventsAction {
   payload: unknown;
 }
 
-export interface loadEventsAction extends EventsAction {
+export interface LoadEventsAction extends EventsAction {
   payload: EventsStructure;
 }

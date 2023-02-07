@@ -1,4 +1,4 @@
-import { loadEventsAction } from "../../actions/events/types";
+import { LoadEventsAction } from "../../actions/events/types";
 import eventsReducer from "./eventsReducer";
 
 describe("Given the eventReducer", () => {
@@ -27,7 +27,7 @@ describe("Given the eventReducer", () => {
         },
       ];
 
-      const newState = eventsReducer(initialState, {} as loadEventsAction);
+      const newState = eventsReducer(initialState, {} as LoadEventsAction);
 
       expect(newState).toBe(initialState);
     });

@@ -1,6 +1,6 @@
 import { EventsStructure } from "../../../data/types";
 import { loadEventsActionCreator } from "./loadEventsActionCreator";
-import { EventsActionType, loadEventsAction } from "./types";
+import { EventsActionType, LoadEventsAction } from "./types";
 
 describe("Given a loadEventsAction function", () => {
   describe("When it receives a list of two events", () => {
@@ -28,7 +28,7 @@ describe("Given a loadEventsAction function", () => {
         },
       ];
 
-      const expectedLoadEventsAction: loadEventsAction = {
+      const expectedLoadEventsAction: LoadEventsAction = {
         type: EventsActionType.loadEvents,
         payload: events,
       };
