@@ -49,6 +49,7 @@ describe("Given the eventReducer", () => {
       expect(newState).toBe(initialState);
     });
   });
+
   describe("When it receives the loadEventsAction", () => {
     test("Then it should return the new state", () => {
       const initialState: EventsStructure = [];
