@@ -2,6 +2,7 @@ import { EventsStructure, EventStructure } from "../../../data/types";
 
 export enum EventsActionType {
   loadEvents,
+  loadEvent,
 }
 
 export interface EventsAction {
