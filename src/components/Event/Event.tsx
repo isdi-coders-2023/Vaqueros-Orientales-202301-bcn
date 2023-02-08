@@ -1,18 +1,30 @@
-import EventComponentStyled from "./EventComponentStyled";
+import { EventStructure } from "../../data/types";
+import EventStyled from "./EventStyled";
 
-interface EventComponentProps {
-  name: string;
-  image: string;
+interface EventProps {
+  event: EventStructure;
 }
 
-const EventComponent = ({ name, image }: EventComponentProps): JSX.Element => {
+const Event = ({
+  event: {
+    name,
+    images: [{ url }],
+    _embedded: {
+      venues: [
+        {
+          city: { name: cityName },
+        },
+      ],
+    },
+  },
+}: EventProps): JSX.Element => {
   return (
-    <EventComponentStyled className="event">
+    <EventStyled className="event">
       <div className="card">
         <button className="card__button-edit">*</button>
         <div className="card__container-image">
           <img
-            src={image}
+            src={url}
             alt="2 quarterbacks between the superbowl logo"
             width="280"
             className="card__image"
@@ -20,7 +32,7 @@ const EventComponent = ({ name, image }: EventComponentProps): JSX.Element => {
         </div>
         <div className="card__info">
           <div className="container-info-city">
-            <span className="card__info-city">Phoenix</span>
+            <span className="card__info-city">{cityName}</span>
             <span className="card__info-date">13 Feb, 2023</span>
           </div>
           <div className="container-info-title">
@@ -29,8 +41,8 @@ const EventComponent = ({ name, image }: EventComponentProps): JSX.Element => {
           </div>
         </div>
       </div>
-    </EventComponentStyled>
+    </EventStyled>
   );
 };
 
-export default EventComponent;
+export default Event;

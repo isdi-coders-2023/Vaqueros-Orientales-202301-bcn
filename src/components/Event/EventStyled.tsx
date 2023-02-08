@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const EventComponentStyled = styled.article`
+const EventStyled = styled.article`
   .card {
     max-width: 32rem;
     max-height: 32rem;
@@ -70,4 +70,4 @@ const EventComponentStyled = styled.article`
     }
   }
 `;
-export default EventComponentStyled;
+export default EventStyled;
