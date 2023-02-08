@@ -80,4 +80,15 @@ describe("Given a EventList Component", () => {
       expect(info).toBe(2);
     });
   });
+  describe("When it renders with 0 events", () => {
+    test("Then it shouldn't show any list", () => {
+      const eventList: EventsStructure = [];
+
+      render(<EventsList events={eventList} />);
+
+      const info = screen.getByRole("list");
+
+      expect(info).toBeEmptyDOMElement();
+    });
+  });
 });
