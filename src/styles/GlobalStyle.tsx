@@ -26,14 +26,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   button {
-    border:none;
-    background:none;
+    border: none;
+    background: none;
     font-family: inherit;
   }
 
   input {
-    border:none;
-    font-family:inherit;
+    border: none;
+    font-family: inherit;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 `;
 
