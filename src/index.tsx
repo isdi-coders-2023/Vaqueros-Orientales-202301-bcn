@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import GlobalStyle from "./GlobalStyle";
+import GlobalStyle from "./styles/GlobalStyle";
 import EventsContextProvider from "./store/contexts/events/EventsContextProvider";
 
 const root = ReactDOM.createRoot(

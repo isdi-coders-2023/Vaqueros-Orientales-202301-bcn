@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import "../node_modules/@fontsource/montserrat-alternates/500.css";
-import "../node_modules/@fontsource/montserrat-alternates/700.css";
+import "../../node_modules/@fontsource/montserrat-alternates/500.css";
+import "../../node_modules/@fontsource/montserrat-alternates/700.css";
 
 const GlobalStyle = createGlobalStyle`
 
