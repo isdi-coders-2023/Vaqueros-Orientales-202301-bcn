@@ -1,10 +1,12 @@
 import Home from "./pages/Home";
 
 import EventComponent from "./components/EventComponent/EventComponent";
+import Header from "./components/Header/Header";
 
 const App = (): JSX.Element => {
   return (
     <div className="container">
+      <Header />
       <Home />
       <EventComponent
         name={"SuperBowl"}
