@@ -1,7 +1,8 @@
-import { EventsStructure } from "../../../data/types";
+import { EventsStructure, EventStructure } from "../../../data/types";
 
 export enum EventsActionType {
   loadEvents,
+  loadEvent,
 }
 
 export interface EventsAction {
@@ -11,4 +12,8 @@ export interface EventsAction {
 
 export interface LoadEventsAction extends EventsAction {
   payload: EventsStructure;
+}
+
+export interface LoadEventAction extends EventsAction {
+  payload: EventStructure;
 }
