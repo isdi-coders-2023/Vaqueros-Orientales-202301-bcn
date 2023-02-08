@@ -28,9 +28,9 @@ describe("Given a EventComponent", () => {
 
       render(<Event event={event} />);
 
-      const info = screen.getByRole("heading", { name, level: 2 });
+      const info = screen.getByRole("heading", { name, level: 2 }).innerHTML;
 
-      expect(info).toBeInTheDocument();
+      expect(info).toContain(name);
     });
   });
 
