@@ -1,7 +1,7 @@
 import { ApiResponseStructure } from "../data/types";
 import EventsContext from "../store/contexts/events/EventsContext";
 import { useContext, useCallback } from "react";
-import { loadEventsActionCreator } from "../store/actions/events/loadEventsActionCreator";
+import { loadEventsActionCreator } from "../store/actions/events/ActionsCreator";
 
 const useApi = () => {
   const { dispatch } = useContext(EventsContext);
