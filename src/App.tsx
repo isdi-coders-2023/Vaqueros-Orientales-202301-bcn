@@ -6,7 +6,6 @@ const App = (): JSX.Element => {
   return (
     <div className="container">
       <Home />
-
       <EventComponent
         name={"SuperBowl"}
         image={

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-
 import useApi from "../hooks/useApi";
 
 const Home = (): JSX.Element => {
@@ -9,7 +8,7 @@ const Home = (): JSX.Element => {
     (async () => loadEvents("music"))();
   }, [loadEvents]);
 
-  return <div>Home</div>;
+  return <h1>Home</h1>;
 };
 
 export default Home;
