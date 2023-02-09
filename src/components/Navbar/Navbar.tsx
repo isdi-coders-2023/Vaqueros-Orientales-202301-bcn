@@ -1,8 +1,9 @@
 import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+import NavbarStyled from "./NavbarStyled";
 
 const Navbar = (): JSX.Element => {
   return (
-    <>
+    <NavbarStyled className="navbar">
       <ul className="navbar-list">
         <li className="navbar-list-item">
           <a href="home">
@@ -20,7 +21,7 @@ const Navbar = (): JSX.Element => {
           </a>
         </li>
       </ul>
-    </>
+    </NavbarStyled>
   );
 };
 
