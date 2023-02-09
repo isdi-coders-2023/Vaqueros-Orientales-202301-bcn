@@ -3,7 +3,7 @@ import { EventsStructure } from "../../data/types";
 import EventsList from "./EventsList";
 
 describe("Given a EventList Component", () => {
-  describe("When it renders a event list with 1 item", () => {
+  describe("When it is rendered and it receives a list of 1 item", () => {
     test("Then it should show a list element", () => {
       const eventsList: EventsStructure = [
         {
@@ -39,7 +39,7 @@ describe("Given a EventList Component", () => {
       expect(info).toBeInTheDocument();
     });
   });
-  describe("When it renders with 2 events", () => {
+  describe("When it is rendered and it receives a list of 2 events", () => {
     test("Then it should show a list of 2 events", () => {
       const eventsList: EventsStructure = [
         {
