@@ -36,11 +36,9 @@ describe("Given a EventComponent", () => {
 
   describe("When it renders with a props called 'image' with alt atribute ='2 quarterbacks between the superbowl logo'", () => {
     test("Then it should show an image with an text alternative '2 quarterbacks between the superbowl logo'", () => {
-      const alternative = "2 quarterbacks between the superbowl logo";
-
       render(<Event event={event} />);
 
-      const info = screen.getByAltText(alternative);
+      const info = screen.getByAltText(event.name);
 
       expect(info).toBeInTheDocument();
     });

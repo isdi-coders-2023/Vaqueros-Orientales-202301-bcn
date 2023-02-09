@@ -25,8 +25,9 @@ const Event = ({
         <div className="card__container-image">
           <img
             src={url}
-            alt="2 quarterbacks between the superbowl logo"
+            alt={name}
             width="280"
+            height="158"
             className="card__image"
           />
         </div>
@@ -37,7 +38,7 @@ const Event = ({
           </div>
           <div className="container-info-title">
             <h2 className="card__info-title">{name}</h2>
-            <button className="card__button-fav">👍</button>
+            <button className="card__button-fav"></button>
           </div>
         </div>
       </div>

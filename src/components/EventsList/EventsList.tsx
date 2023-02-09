@@ -10,7 +10,6 @@ const EventsList = ({ events }: EventsListProps): JSX.Element => {
     <ul className="event__list">
       {events.map((event) => (
         <li key={event.id}>
-          {" "}
           <Event event={event} />
         </li>
       ))}
