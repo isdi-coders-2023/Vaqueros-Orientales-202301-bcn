@@ -48,6 +48,7 @@
     "@types/styled-components": "^5.1.26",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.0",
+    "msw": "^1.0.0",
     "prettier": "^2.8.3",
     "styled-components": "^5.3.6"
   },
@@ -56,7 +57,8 @@
       "src/**/*.ts",
       "src/**/*.tsx",
       "!src/index.tsx",
-      "!src/react-app-env.d.ts"
+      "!src/react-app-env.d.ts",
+      "!src/setupTests.ts"
     ]
   }
 }
