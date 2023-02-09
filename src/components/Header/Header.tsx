@@ -1,11 +1,12 @@
 import Navbar from "../Navbar/Navbar";
+import HeaderStyled from "./HeaderStyled";
 
 const Header = (): JSX.Element => {
   return (
-    <header>
+    <HeaderStyled>
       <img src="logo.png" alt="Event-oh logo" />
       <Navbar />
-    </header>
+    </HeaderStyled>
   );
 };
 
