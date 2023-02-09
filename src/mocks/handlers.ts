@@ -11,24 +11,26 @@ export const handlers = [
       context.status(200),
       context.json({
         _embedded: {
-          events: {
-            name: "SuperBowl",
-            id: "0",
-            type: "",
-            images: [{ url: "" }],
-            _embedded: {
-              venues: [
-                {
-                  name: "",
-                  city: { name: "Phoenix" },
-                  country: { name: "" },
-                  address: { line1: "" },
-                },
-              ],
+          events: [
+            {
+              name: "SuperBowl",
+              id: "0",
+              type: "",
+              images: [{ url: "" }],
+              _embedded: {
+                venues: [
+                  {
+                    name: "",
+                    city: { name: "Phoenix" },
+                    country: { name: "" },
+                    address: { line1: "" },
+                  },
+                ],
+              },
+              priceRanges: [{ min: 0 }],
+              dates: { start: { localDate: "", localTime: "" } },
             },
-            priceRanges: [{ min: 0 }],
-            dates: { start: { localDate: "", localTime: "" } },
-          },
+          ],
         },
       })
     );
