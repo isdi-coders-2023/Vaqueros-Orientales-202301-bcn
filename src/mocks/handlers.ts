@@ -1,7 +1,9 @@
 import { rest } from "msw";
 
 const apiKey = `apikey=${process.env.REACT_APP_API_KEY}`;
-const url = `${process.env.REACT_APP_URL_API!}${apiKey}`;
+const param = `${process.env.REACT_APP_API_PARAM}`;
+const country = `&countryCode=ES`;
+const url = `${process.env.REACT_APP_URL_API!}${param}${apiKey}${country}`;
 
 export const handlers = [
   rest.get(`${url}`, (request, response, context) => {
