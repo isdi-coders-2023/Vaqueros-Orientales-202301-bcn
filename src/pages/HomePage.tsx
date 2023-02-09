@@ -12,7 +12,12 @@ const Home = (): JSX.Element => {
     (async () => loadEvents())();
   }, [loadEvents]);
 
-  return <EventsList events={events} />;
+  return (
+    <>
+      <h1>FindEvents</h1>
+      <EventsList events={events} />;
+    </>
+  );
 };
 
 export default Home;

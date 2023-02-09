@@ -8,7 +8,7 @@ describe("Given a EventList Component", () => {
       const eventsList: EventsStructure = [
         {
           name: "Lady Gaga",
-          id: "",
+          id: "1",
           type: "",
           images: [
             { url: "", ratio: "" },
@@ -44,7 +44,7 @@ describe("Given a EventList Component", () => {
       const eventsList: EventsStructure = [
         {
           name: "Lady Gaga",
-          id: "",
+          id: "2",
           type: "",
           images: [
             { url: "", ratio: "" },
@@ -69,7 +69,7 @@ describe("Given a EventList Component", () => {
         },
         {
           name: "Opera",
-          id: "",
+          id: "3",
           type: "",
           images: [
             { url: "", ratio: "" },
