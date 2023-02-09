@@ -1,7 +1,7 @@
 import { ApiResponseStructure } from "../data/types";
 import EventsContext from "../store/contexts/events/EventsContext";
 import { useContext, useCallback } from "react";
-import { loadEventsActionCreator } from "../store/actions/events/ActionsCreator";
+import { loadEventsActionCreator } from "../store/actions/events/EventsActionsCreator";
 
 const useApi = () => {
   const { dispatch } = useContext(EventsContext);
@@ -11,7 +11,7 @@ const useApi = () => {
 
   const loadEvents = useCallback(async () => {
     try {
-      const result = await fetch(url!);
+      const result = await fetch(url);
       const events = (await result.json()) as ApiResponseStructure;
       dispatch(loadEventsActionCreator(events._embedded.events));
     } catch (error: unknown) {
