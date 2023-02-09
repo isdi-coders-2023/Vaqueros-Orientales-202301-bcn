@@ -13,7 +13,7 @@ const EventStyled = styled.article`
     &__button-edit {
       position: absolute;
       top: 2.5rem;
-      right: 2.5rem;
+      right: 3rem;
       font-size: 4rem;
       background: white;
       width: 4rem;
@@ -40,10 +40,10 @@ const EventStyled = styled.article`
         justify-content: space-between;
 
         .card__info-city {
-          font-size: 2rem;
+          font-size: 1.4rem;
         }
         .card__info-date {
-          font-size: 1.8rem;
+          font-size: 1.4rem;
           text-align: right;
         }
       }
@@ -54,7 +54,7 @@ const EventStyled = styled.article`
         align-items: center;
         .card__info-title {
           max-width: 22rem;
-          font-size: 3.2rem;
+          font-size: 2rem;
           font-weight: bold;
           letter-spacing: -0.02em;
         }
