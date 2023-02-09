@@ -10,7 +10,14 @@ describe("Given a loadEventsAction function", () => {
           name: "Lady Gaga",
           id: "",
           type: "",
-          images: [{ url: "" }],
+          images: [
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+          ],
+
           _embedded: {
             venues: [
               {
@@ -28,7 +35,14 @@ describe("Given a loadEventsAction function", () => {
           name: "Opera",
           id: "",
           type: "",
-          images: [{ url: "" }],
+          images: [
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+          ],
+
           _embedded: {
             venues: [
               {

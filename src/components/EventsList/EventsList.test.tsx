@@ -10,7 +10,13 @@ describe("Given a EventList Component", () => {
           name: "Lady Gaga",
           id: "",
           type: "",
-          images: [{ url: "" }],
+          images: [
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+          ],
           _embedded: {
             venues: [
               {
@@ -40,7 +46,14 @@ describe("Given a EventList Component", () => {
           name: "Lady Gaga",
           id: "",
           type: "",
-          images: [{ url: "" }],
+          images: [
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+          ],
+
           _embedded: {
             venues: [
               {
@@ -58,7 +71,14 @@ describe("Given a EventList Component", () => {
           name: "Opera",
           id: "",
           type: "",
-          images: [{ url: "" }],
+          images: [
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+          ],
+
           _embedded: {
             venues: [
               {

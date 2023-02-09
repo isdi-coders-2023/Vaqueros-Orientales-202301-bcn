@@ -6,7 +6,13 @@ const event: EventStructure = {
   name: "SuperBowl",
   id: "0",
   type: "",
-  images: [{ url: "" }],
+  images: [
+    { url: "", ratio: "" },
+    { url: "", ratio: "" },
+    { url: "", ratio: "" },
+    { url: "", ratio: "" },
+    { url: "", ratio: "" },
+  ],
   _embedded: {
     venues: [
       {

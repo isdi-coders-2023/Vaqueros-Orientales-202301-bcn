@@ -10,7 +10,14 @@ describe("Given the eventReducer", () => {
           name: "Opera",
           id: "",
           type: "",
-          images: [{ url: "" }],
+          images: [
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+          ],
+
           _embedded: {
             venues: [
               {
@@ -28,7 +35,13 @@ describe("Given the eventReducer", () => {
           name: "Cinema",
           id: "",
           type: "",
-          images: [{ url: "" }],
+          images: [
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+          ],
           _embedded: {
             venues: [
               {
@@ -44,7 +57,12 @@ describe("Given the eventReducer", () => {
         },
       ];
 
-      const newState = eventsReducer(initialState, {} as LoadEventsAction);
+      const action = {
+        type: "" as unknown as EventsActionType,
+        payload: {},
+      };
+
+      const newState = eventsReducer(initialState, action as LoadEventsAction);
 
       expect(newState).toBe(initialState);
     });
@@ -61,7 +79,7 @@ describe("Given the eventReducer", () => {
             name: "Opera",
             id: "",
             type: "",
-            images: [{ url: "" }],
+            images: [{}, {}, {}, {}, { url: "" }],
             _embedded: {
               venues: [
                 {
@@ -79,7 +97,7 @@ describe("Given the eventReducer", () => {
             name: "Opera",
             id: "",
             type: "",
-            images: [{ url: "" }],
+            images: [{}, {}, {}, {}, { url: "" }],
             _embedded: {
               venues: [
                 {
