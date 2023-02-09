@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useMemo, useReducer } from "react";
 import eventsReducer from "../../reducers/events/eventsReducer";
 import EventsContext from "./EventsContext";
 
@@ -10,10 +10,11 @@ const EventsContextProvider = ({
   children,
 }: EventsContextProviderProps): JSX.Element => {
   const [events, dispatch] = useReducer(eventsReducer, []);
+
+  const value = useMemo(() => ({ events, dispatch }), [events, dispatch]);
+
   return (
-    <EventsContext.Provider value={{ events, dispatch }}>
-      {children}
-    </EventsContext.Provider>
+    <EventsContext.Provider value={value}>{children}</EventsContext.Provider>
   );
 };
 
