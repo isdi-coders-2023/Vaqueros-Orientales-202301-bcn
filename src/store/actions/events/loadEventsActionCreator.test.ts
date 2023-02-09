@@ -1,5 +1,5 @@
 import { EventsStructure } from "../../../data/types";
-import { loadEventsActionCreator } from "./ActionsCreator";
+import { loadEventsActionCreator } from "./EventsActionsCreator";
 import { EventsActionType, LoadEventsAction } from "./types";
 
 describe("Given a loadEventsAction function", () => {
