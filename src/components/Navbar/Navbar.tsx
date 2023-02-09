@@ -7,18 +7,27 @@ const Navbar = (): JSX.Element => {
       <ul className="navbar-list">
         <li className="navbar-list-item">
           <a href="home">
-            <i className="fa-solid fa-house-chimney" aria-label="Home"></i>
+            <i
+              className="fa-solid fa-house-chimney"
+              role="navigation"
+              aria-label="Home"
+            ></i>
           </a>
         </li>
         <li className="navbar-list-item">
           <a href="create">
-            <i className="fa-regular fa-plus" aria-label="Create an Event"></i>
+            <i
+              className="fa-regular fa-plus"
+              role="navigation"
+              aria-label="Create an Event"
+            ></i>
           </a>
         </li>
         <li className="navbar-list-item">
           <a href="myList">
             <i
               className="fa-regular fa-rectangle-list"
+              role="navigation"
               aria-label="My Events List"
             ></i>
           </a>

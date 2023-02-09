@@ -28,7 +28,7 @@ const Event = ({ event }: EventProps): JSX.Element => {
           </div>
           <div className="container-info-title">
             <h2 className="card__info-title">{event.name}</h2>
-            <button className="card__button-fav"></button>
+            <button className="card__button-fav" aria-pressed="true"></button>
           </div>
         </div>
       </div>
