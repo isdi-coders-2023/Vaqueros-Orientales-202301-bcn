@@ -9,7 +9,14 @@ describe("Given a loadEventAction", () => {
         name: "Lady Gaga",
         id: "",
         type: "",
-        images: [{ url: "" }],
+        images: [
+          { url: "", ratio: "" },
+          { url: "", ratio: "" },
+          { url: "", ratio: "" },
+          { url: "", ratio: "" },
+          { url: "", ratio: "" },
+        ],
+
         _embedded: {
           venues: [
             {

@@ -2,7 +2,13 @@ export interface EventStructure {
   name: string;
   id: string;
   type: string;
-  images: [{ url: string }];
+  images: [
+    ImageStructure,
+    ImageStructure,
+    ImageStructure,
+    ImageStructure,
+    ImageStructure
+  ];
   _embedded: {
     venues: [
       {
@@ -21,6 +27,11 @@ export interface ApiResponseStructure {
   _embedded: {
     events: EventsStructure;
   };
+}
+
+export interface ImageStructure {
+  ratio: string;
+  url: string;
 }
 
 export type EventsStructure = EventStructure[];
