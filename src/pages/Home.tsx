@@ -9,7 +9,7 @@ const Home = (): JSX.Element => {
   const { events } = useContext(EventsContext);
 
   useEffect(() => {
-    (async () => loadEvents("music"))();
+    (async () => loadEvents())();
   }, [loadEvents]);
 
   if (!events) {
