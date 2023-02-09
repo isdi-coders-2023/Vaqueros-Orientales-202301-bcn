@@ -11,7 +11,7 @@ const useApi = () => {
 
   const loadEvents = useCallback(async () => {
     try {
-      const result = await fetch(url!);
+      const result = await fetch(url);
       const events = (await result.json()) as ApiResponseStructure;
       dispatch(loadEventsActionCreator(events._embedded.events));
     } catch (error: unknown) {
