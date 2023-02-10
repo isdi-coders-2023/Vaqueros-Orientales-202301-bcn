@@ -28,7 +28,7 @@ const EventStyled = styled.article`
     }
 
     &__image {
-      object-fit: contain;
+      object-fit: cover;
     }
 
     &__info {
