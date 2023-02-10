@@ -34,4 +34,6 @@ export interface ImageStructure {
   url: string;
 }
 
+export type ImagesStructure = ImageStructure[];
+
 export type EventsStructure = EventStructure[];

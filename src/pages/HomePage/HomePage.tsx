@@ -3,11 +3,14 @@ import EventsList from "../../components/EventsList/EventsList";
 
 import useApi from "../../hooks/useApi";
 import EventsContext from "../../store/contexts/events/EventsContext";
+import { filterRepeteadEvents } from "../../utils/filterEvents";
 import HomePageStyled from "./HomePageStyled";
 
-const Home = (): JSX.Element => {
+const HomePage = (): JSX.Element => {
   const { loadEvents } = useApi();
   const { events } = useContext(EventsContext);
+
+  const filterdeData = filterRepeteadEvents(events);
 
   useEffect(() => {
     (async () => loadEvents())();
@@ -19,10 +22,10 @@ const Home = (): JSX.Element => {
         <h1 className="title">FindEvents</h1>
       </HomePageStyled>
       <div className="grid-container">
-        <EventsList events={events} />;
+        <EventsList events={filterdeData} />;
       </div>
     </>
   );
 };
 
-export default Home;
+export default HomePage;
