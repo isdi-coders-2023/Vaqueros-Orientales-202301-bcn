@@ -1,6 +1,7 @@
 export enum UiActionType {
   setLoading,
   unsetLoading,
+  default,
 }
 
 export interface uiAction {

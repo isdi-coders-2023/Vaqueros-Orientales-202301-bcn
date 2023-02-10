@@ -7,9 +7,11 @@ const uiReducer = (currentUiState: boolean, action: uiAction) => {
     case UiActionType.setLoading:
       newUiState = true;
       break;
+
     case UiActionType.unsetLoading:
       newUiState = false;
       break;
+
     default:
       newUiState = currentUiState;
   }
