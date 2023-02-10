@@ -9,8 +9,8 @@ const EventStyled = styled.article`
     justify-content: center;
     flex-direction: column;
     position: relative;
-    border: solid 1px black;
-    border-radius: 5px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 
     &__button-edit {
       position: absolute;
@@ -28,6 +28,8 @@ const EventStyled = styled.article`
       max-width: 28rem;
       overflow: hidden;
       padding: 0;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
 
     &__image {
