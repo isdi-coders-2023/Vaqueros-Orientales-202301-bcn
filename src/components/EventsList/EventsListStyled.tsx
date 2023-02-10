@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const EventsListStyled = styled.section`
+const EventsListStyled = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
