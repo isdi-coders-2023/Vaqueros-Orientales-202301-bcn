@@ -1,4 +1,4 @@
-import { uiAction, UiActionType } from "../../actions/ui/types";
+import { UiAction, UiActionType } from "../../actions/ui/types";
 import uiReducer from "./uiReducer";
 
 describe("Given the uiReducer", () => {
@@ -6,7 +6,7 @@ describe("Given the uiReducer", () => {
     test("Then it should change the new state to true", () => {
       const initialState = false;
 
-      const action: uiAction = {
+      const action: UiAction = {
         type: UiActionType.setLoading,
         payload: initialState,
       };
@@ -22,7 +22,7 @@ describe("Given the uiReducer", () => {
     test("Then it should return that the new state is false", () => {
       const initialState = true;
 
-      const action: uiAction = {
+      const action: UiAction = {
         type: UiActionType.unsetLoading,
         payload: initialState,
       };
@@ -37,7 +37,7 @@ describe("Given the uiReducer", () => {
     test("Then it should return that the new state is the same as the initialstate", () => {
       const initialState = false;
 
-      const action: uiAction = {
+      const action: UiAction = {
         type: UiActionType.default,
       };
 
