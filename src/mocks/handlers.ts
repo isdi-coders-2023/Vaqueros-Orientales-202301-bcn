@@ -36,3 +36,9 @@ export const handlers = [
     );
   }),
 ];
+
+export const errorHandlers = [
+  rest.get(`${url}`, (request, response, context) => {
+    return response(context.status(404));
+  }),
+];
