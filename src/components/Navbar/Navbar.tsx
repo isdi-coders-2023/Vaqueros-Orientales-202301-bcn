@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 import NavbarStyled from "./NavbarStyled";
 
@@ -6,22 +7,22 @@ const Navbar = (): JSX.Element => {
     <NavbarStyled className="navbar">
       <ul className="navbar-list">
         <li className="navbar-list-item">
-          <a href="home">
+          <Link to="/">
             <i
               className="fa-solid fa-house-chimney"
               role="navigation"
               aria-label="Home"
             ></i>
-          </a>
+          </Link>
         </li>
         <li className="navbar-list-item">
-          <a href="create">
+          <Link to="/create">
             <i
               className="fa-regular fa-plus"
               role="navigation"
               aria-label="Create an Event"
             ></i>
-          </a>
+          </Link>
         </li>
         <li className="navbar-list-item">
           <a href="myList">
