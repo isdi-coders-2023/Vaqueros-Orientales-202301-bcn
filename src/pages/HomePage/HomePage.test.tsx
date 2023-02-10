@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import MockContextProvider from "../mocks/MockContextProvider";
-import { mockStore } from "../mocks/mockStore";
-import HomePage from "./HomePage";
+import MockContextProvider from "../../mocks/MockContextProvider";
+import { mockStore } from "../../mocks/mockStore";
+import HomePage from "../HomePage/HomePage";
 
 const store = mockStore;
 

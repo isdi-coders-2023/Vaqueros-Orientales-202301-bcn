@@ -1,5 +1,6 @@
 import { EventsStructure } from "../../data/types";
 import Event from "../Event/Event";
+import EventsListStyled from "./EventsListStyled";
 
 interface EventsListProps {
   events: EventsStructure;
@@ -7,13 +8,13 @@ interface EventsListProps {
 
 const EventsList = ({ events }: EventsListProps): JSX.Element => {
   return (
-    <ul className="event__list">
+    <EventsListStyled>
       {events.map((event) => (
         <li key={event.id}>
           <Event event={event} />
         </li>
       ))}
-    </ul>
+    </EventsListStyled>
   );
 };
 

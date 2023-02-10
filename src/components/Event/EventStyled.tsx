@@ -3,12 +3,14 @@ import styled from "styled-components";
 const EventStyled = styled.article`
   .card {
     max-width: 32rem;
-    max-height: 32rem;
-    padding: 2rem;
+    /* min-height: 35rem; */
+    /* padding: 2rem; */
     display: flex;
     justify-content: center;
     flex-direction: column;
     position: relative;
+    border: solid 1px black;
+    border-radius: 5px;
 
     &__button-edit {
       position: absolute;
@@ -25,6 +27,7 @@ const EventStyled = styled.article`
     &__container-image {
       max-width: 28rem;
       overflow: hidden;
+      padding: 0;
     }
 
     &__image {
@@ -34,6 +37,8 @@ const EventStyled = styled.article`
     &__info {
       padding-top: 1rem;
       max-width: 28rem;
+      padding: 2rem;
+      min-height: 15rem;
 
       .container-info-city {
         display: flex;
