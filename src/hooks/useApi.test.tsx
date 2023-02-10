@@ -28,4 +28,25 @@ describe("Given the custom hook useApi", () => {
       expect(dispatcher).toHaveBeenCalled();
     });
   });
+  describe("When it is called and the response from the fetch fails", () => {
+    test("Then dispatch should not be called", async () => {
+      const {
+        result: {
+          current: { loadEvents },
+        },
+      } = renderHook(() => useApi(), {
+        wrapper: ({ children }) => {
+          return (
+            <MockContextProvider mockStore={store}>
+              {children}
+            </MockContextProvider>
+          );
+        },
+      });
+
+      await waitFor(async () => loadEvents());
+
+      expect(dispatcher).toHaveBeenCalled();
+    });
+  });
 });
