@@ -1,6 +1,8 @@
 import { renderHook, waitFor } from "@testing-library/react";
+import { errorHandlers } from "../mocks/handlers";
 import MockContextProvider from "../mocks/MockContextProvider";
 import { mockDispatch, mockStore } from "../mocks/mockStore";
+import { server } from "../mocks/server";
 import useApi from "./useApi";
 
 const dispatcher = mockDispatch;
@@ -29,6 +31,7 @@ describe("Given the custom hook useApi", () => {
     });
   });
   describe("When it is called and the response from the fetch fails", () => {
+    beforeEach(() => server.resetHandlers(...errorHandlers));
     test("Then dispatch should not be called", async () => {
       const {
         result: {
@@ -46,7 +49,7 @@ describe("Given the custom hook useApi", () => {
 
       await waitFor(async () => loadEvents());
 
-      expect(dispatcher).toHaveBeenCalled();
+      expect(dispatcher).not.toBeCalled();
     });
   });
 });
