@@ -3,10 +3,15 @@ import { uiAction, UiActionType } from "../../actions/ui/types";
 const uiReducer = (currentUiState: boolean, action: uiAction) => {
   let newUiState: boolean;
 
-  if ((action.type = UiActionType.setLoading)) {
-    newUiState = true;
-  } else {
-    newUiState = currentUiState;
+  switch (action.type) {
+    case UiActionType.setLoading:
+      newUiState = true;
+      break;
+    case UiActionType.unsetLoading:
+      newUiState = false;
+      break;
+    default:
+      newUiState = currentUiState;
   }
   return newUiState;
 };

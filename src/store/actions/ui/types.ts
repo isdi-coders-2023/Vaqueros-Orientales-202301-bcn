@@ -1,5 +1,6 @@
 export enum UiActionType {
   setLoading,
+  unsetLoading,
 }
 
 export interface uiAction {
@@ -8,3 +9,5 @@ export interface uiAction {
 }
 
 export interface SetLoadingAction extends uiAction {}
+
+export interface unsetLoadingAction extends uiAction {}

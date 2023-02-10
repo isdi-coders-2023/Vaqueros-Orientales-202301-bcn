@@ -1,6 +1,6 @@
-import { EventStructure } from "../../data/types";
-import { loadEventActionCreator } from "./events/EventsActionsCreator";
-import { EventsActionType, LoadEventAction } from "./events/types";
+import { EventStructure } from "../../../data/types";
+import { loadEventActionCreator } from "../events/EventsActionsCreator";
+import { EventsActionType, LoadEventAction } from "../events/types";
 
 describe("Given a loadEventAction", () => {
   describe("When it recieves an event", () => {
