@@ -1,7 +1,7 @@
 const CreateEvent = (): JSX.Element => {
   return (
     <>
-      <h1>createEvent</h1>
+      <h1 className="title">CreateEvents</h1>
     </>
   );
 };

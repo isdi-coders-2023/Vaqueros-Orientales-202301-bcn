@@ -1,5 +1,5 @@
 import { RouterProvider } from "react-router-dom";
-import CreateEvent from "./pages/CreateEvent/CreateEvent";
+import CreateEvent from "./pages/CreateEventPage/CreateEventPage";
 import HomePage from "./pages/HomePage/HomePage";
 import router from "./router/router";
 

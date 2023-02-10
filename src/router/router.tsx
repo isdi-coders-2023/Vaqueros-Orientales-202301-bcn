@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layaout from "../Layaout/Layaout";
-import CreateEvent from "../pages/CreateEvent/CreateEvent";
+import CreateEvent from "../pages/CreateEventPage/CreateEventPage";
 import HomePage from "../pages/HomePage/HomePage";
 
 const router = createBrowserRouter([
