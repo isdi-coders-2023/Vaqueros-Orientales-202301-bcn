@@ -1,9 +1,9 @@
-import { SetLoadingAction, UiActionType, unsetLoadingAction } from "./types";
+import { SetLoadingAction, UiActionType, UnsetLoadingAction } from "./types";
 
 export const setLoadingActionCreator = (): SetLoadingAction => ({
   type: UiActionType.setLoading,
 });
 
-export const unsetLoadingActionCreator = (): unsetLoadingAction => ({
+export const unsetLoadingActionCreator = (): UnsetLoadingAction => ({
   type: UiActionType.unsetLoading,
 });

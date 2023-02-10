@@ -1,12 +1,12 @@
 import { createContext } from "vm";
-import { uiAction } from "../../actions/ui/types";
+import { UiAction } from "../../actions/ui/types";
 
 interface uiContextStructure {
   isLoading: boolean;
   unsetLoading: boolean;
-  dispatch: React.Dispatch<uiAction>;
+  dispatch: React.Dispatch<UiAction>;
 }
 
-const uiContext = createContext({} as uiContextStructure);
+const UiContext = createContext({} as uiContextStructure);
 
-export default uiContext;
+export default UiContext;

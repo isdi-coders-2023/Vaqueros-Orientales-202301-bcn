@@ -1,6 +1,6 @@
-import { uiAction, UiActionType } from "../../actions/ui/types";
+import { UiAction, UiActionType } from "../../actions/ui/types";
 
-const uiReducer = (currentUiState: boolean, action: uiAction) => {
+const uiReducer = (currentUiState: boolean, action: UiAction) => {
   let newUiState: boolean;
 
   switch (action.type) {
