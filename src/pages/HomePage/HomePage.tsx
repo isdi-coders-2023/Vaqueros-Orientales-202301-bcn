@@ -5,7 +5,7 @@ import useApi from "../../hooks/useApi";
 import EventsContext from "../../store/contexts/events/EventsContext";
 import HomePageStyled from "./HomePageStyled";
 
-const Home = (): JSX.Element => {
+const HomePage = (): JSX.Element => {
   const { loadEvents } = useApi();
   const { events } = useContext(EventsContext);
 
@@ -25,4 +25,4 @@ const Home = (): JSX.Element => {
   );
 };
 
-export default Home;
+export default HomePage;

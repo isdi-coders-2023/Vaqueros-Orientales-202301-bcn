@@ -1,11 +1,14 @@
-import Home from "./pages/HomePage/HomePage";
-import Header from "./components/Header/Header";
+import { RouterProvider } from "react-router-dom";
+import CreateEvent from "./pages/CreateEvent/CreateEvent";
+import HomePage from "./pages/HomePage/HomePage";
+import router from "./router/router";
 
 const App = (): JSX.Element => {
   return (
     <div className="container">
-      <Header />
-      <Home />
+      <RouterProvider router={router} />
+      <HomePage />
+      <CreateEvent />
     </div>
   );
 };
