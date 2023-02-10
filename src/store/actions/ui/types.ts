@@ -4,11 +4,11 @@ export enum UiActionType {
   default,
 }
 
-export interface uiAction {
+export interface UiAction {
   type: UiActionType;
   payload?: unknown;
 }
 
-export interface SetLoadingAction extends uiAction {}
+export interface SetLoadingAction extends UiAction {}
 
-export interface unsetLoadingAction extends uiAction {}
+export interface UnsetLoadingAction extends UiAction {}
