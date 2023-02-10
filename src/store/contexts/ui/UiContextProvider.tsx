@@ -1,6 +1,6 @@
 import { useMemo, useReducer } from "react";
 import uiReducer from "../../reducers/ui/uiReducer";
-import uiContext from "./UiContext";
+import UiContext from "./UiContext";
 
 interface UiContextProviderProps {
   children: JSX.Element | JSX.Element[];
@@ -13,5 +13,5 @@ export const UiContextProvider = ({
 
   const value = useMemo(() => ({ isLoading, dispatch }), [isLoading, dispatch]);
 
-  return <uiContext.Provider value={value}>{children}</uiContext.Provider>;
+  return <UiContext.Provider value={value}>{children}</UiContext.Provider>;
 };
