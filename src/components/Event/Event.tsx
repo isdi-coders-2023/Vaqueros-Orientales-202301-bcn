@@ -9,13 +9,12 @@ const Event = ({ event }: EventProps): JSX.Element => {
   return (
     <EventStyled className="event">
       <div className="card">
-        <button className="card__button-edit"></button>
         <div className="card__container-image">
           <img
             src={event.images[4].url}
             alt={event.name}
             width="280"
-            height="auto"
+            height="157"
             className="card__image"
           />
         </div>
@@ -30,7 +29,6 @@ const Event = ({ event }: EventProps): JSX.Element => {
           </div>
           <div className="container-info-title">
             <h2 className="card__info-title">{event.name}</h2>
-            <button className="card__button-fav" aria-pressed="true"></button>
           </div>
         </div>
       </div>

@@ -31,8 +31,7 @@ const EventStyled = styled.article`
     }
 
     &__image {
-      object-fit: contain;
-      max-width: 100%;
+      object-fit: cover;
     }
 
     &__info {
