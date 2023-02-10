@@ -4,17 +4,17 @@ import { filterRepeteadEvents } from "./filterEvents";
 describe("Given the filterEvents function", () => {
   describe("When it's recieves a list with repeated photos events", () => {
     test("Then it should return a list with no repeated events", () => {
-      const events: EventsStructure = [
+      const eventsList: EventsStructure = [
         {
-          name: "Beyonce",
-          id: "3",
+          name: "Lady Gaga",
+          id: "2",
           type: "",
           images: [
             { url: "", ratio: "" },
             { url: "", ratio: "" },
             { url: "", ratio: "" },
             { url: "", ratio: "" },
-            { url: "beyonce.jpg", ratio: "" },
+            { url: "lady.jpg", ratio: "" },
           ],
 
           _embedded: {
@@ -25,30 +25,30 @@ describe("Given the filterEvents function", () => {
                 country: { name: "" },
                 address: { line1: "" },
               },
-              {
-                name: "Beyoce",
-                id: "500",
-                type: "",
-                images: [
-                  { url: "", ratio: "" },
-                  { url: "", ratio: "" },
-                  { url: "", ratio: "" },
-                  { url: "", ratio: "" },
-                  { url: "beyonce.jpg", ratio: "" },
-                ],
+            ],
+          },
+          priceRanges: [{ min: 12 }],
+          dates: { start: { localDate: "", localTime: "" } },
+        },
+        {
+          name: "Lady Gaga",
+          id: "300",
+          type: "",
+          images: [
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "", ratio: "" },
+            { url: "lady.jpg", ratio: "" },
+          ],
 
-                _embedded: {
-                  venues: [
-                    {
-                      name: "",
-                      city: { name: "" },
-                      country: { name: "" },
-                      address: { line1: "" },
-                    },
-                  ],
-                },
-                priceRanges: [{ min: 300 }],
-                dates: { start: { localDate: "", localTime: "" } },
+          _embedded: {
+            venues: [
+              {
+                name: "",
+                city: { name: "" },
+                country: { name: "" },
+                address: { line1: "" },
               },
             ],
           },
@@ -57,7 +57,7 @@ describe("Given the filterEvents function", () => {
         },
       ];
 
-      const expectedEventList = filterRepeteadEvents(events);
+      const expectedEventList = filterRepeteadEvents(eventsList);
       expect(expectedEventList).toHaveLength(1);
     });
   });
