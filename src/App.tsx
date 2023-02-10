@@ -1,11 +1,11 @@
-import Home from "./pages/HomePage/HomePage";
 import Header from "./components/Header/Header";
+import HomePage from "./pages/HomePage/HomePage";
 
 const App = (): JSX.Element => {
   return (
     <div className="container">
       <Header />
-      <Home />
+      <HomePage />
     </div>
   );
 };
