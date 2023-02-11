@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import { EventsStructure } from "../../data/types";
 import EventsList from "./EventsList";
 
@@ -32,7 +33,7 @@ describe("Given a EventList Component", () => {
         },
       ];
 
-      render(<EventsList events={eventsList} />);
+      render(<EventsList events={eventsList} />, { wrapper: BrowserRouter });
 
       const title = "Lady Gaga";
 
@@ -95,7 +96,7 @@ describe("Given a EventList Component", () => {
           dates: { start: { localDate: "", localTime: "" } },
         },
       ];
-      render(<EventsList events={eventsList} />);
+      render(<EventsList events={eventsList} />, { wrapper: BrowserRouter });
 
       const info = screen.getAllByRole("listitem").length;
 
@@ -107,7 +108,7 @@ describe("Given a EventList Component", () => {
     test("Then it shouldn't show any heading", () => {
       const eventList: EventsStructure = [];
 
-      render(<EventsList events={eventList} />);
+      render(<EventsList events={eventList} />, { wrapper: BrowserRouter });
 
       expect(eventList).toHaveLength(0);
     });

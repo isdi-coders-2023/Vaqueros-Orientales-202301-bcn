@@ -1,12 +1,7 @@
-import { RouterProvider } from "react-router-dom";
-import router from "./router/router";
+import Layout from "./Layout/Layout";
 
 const App = (): JSX.Element => {
-  return (
-    <div className="container">
-      <RouterProvider router={router} />
-    </div>
-  );
+  return <Layout />;
 };
 
 export default App;
