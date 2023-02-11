@@ -6,7 +6,6 @@ export enum UiActionType {
 
 export interface UiAction {
   type: UiActionType;
-  payload?: unknown;
 }
 
 export interface SetLoadingAction extends UiAction {}

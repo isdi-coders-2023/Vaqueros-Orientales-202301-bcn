@@ -1,10 +1,12 @@
 import { EventsStructure, EventStructure } from "../data/types";
 import { EventsAction } from "../store/actions/events/types";
 import EventsContext from "../store/contexts/events/EventsContext";
+import UiContext from "../store/contexts/ui/UiContext";
 
 export interface MockContextProviderProps {
   children: JSX.Element | JSX.Element[];
   mockStore: StoreStructure;
+  uiMockStore: UiStoreStructure;
 }
 
 interface StoreStructure {
@@ -16,14 +18,22 @@ interface StoreStructure {
   };
 }
 
+interface UiStoreStructure {
+  dispatch: React.Dispatch<any>;
+  isLoading: boolean;
+}
+
 const MockContextProvider = ({
   children,
   mockStore,
+  uiMockStore,
 }: MockContextProviderProps): JSX.Element => {
   return (
-    <EventsContext.Provider value={mockStore}>
-      {children}
-    </EventsContext.Provider>
+    <UiContext.Provider value={uiMockStore}>
+      <EventsContext.Provider value={mockStore}>
+        {children}
+      </EventsContext.Provider>
+    </UiContext.Provider>
   );
 };
 
