@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layaout from "../Layaout/Layaout";
+import Layout from "../Layout/Layout";
 import CreateEvent from "../pages/CreateEventPage/CreateEventPage";
 import HomePage from "../pages/HomePage/HomePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layaout />,
+    element: <Layout />,
     children: [
       {
         path: "/",
