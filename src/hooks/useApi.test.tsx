@@ -3,10 +3,12 @@ import { errorHandlers } from "../mocks/handlers";
 import MockContextProvider from "../mocks/MockContextProvider";
 import { mockDispatch, mockStore } from "../mocks/mockStore";
 import { server } from "../mocks/server";
+import { uiMockStore } from "../mocks/uiMockStore";
 import useApi from "./useApi";
 
 const dispatcher = mockDispatch;
 const store = mockStore;
+const uiStore = uiMockStore;
 
 describe("Given the custom hook useApi", () => {
   describe("When it is called", () => {
@@ -18,7 +20,7 @@ describe("Given the custom hook useApi", () => {
       } = renderHook(() => useApi(), {
         wrapper: ({ children }) => {
           return (
-            <MockContextProvider mockStore={store}>
+            <MockContextProvider uiMockStore={uiStore} mockStore={store}>
               {children}
             </MockContextProvider>
           );
@@ -40,7 +42,7 @@ describe("Given the custom hook useApi", () => {
       } = renderHook(() => useApi(), {
         wrapper: ({ children }) => {
           return (
-            <MockContextProvider mockStore={store}>
+            <MockContextProvider uiMockStore={uiStore} mockStore={store}>
               {children}
             </MockContextProvider>
           );
