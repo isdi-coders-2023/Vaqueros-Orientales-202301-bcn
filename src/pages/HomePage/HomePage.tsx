@@ -8,7 +8,9 @@ import HomePageStyled from "./HomePageStyled";
 
 const HomePage = (): JSX.Element => {
   const { loadEvents } = useApi();
-  const { events } = useContext(EventsContext);
+  const {
+    store: { events },
+  } = useContext(EventsContext);
 
   const filterdeData = filterRepeteadEvents(events);
 
