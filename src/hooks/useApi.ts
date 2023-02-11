@@ -4,7 +4,9 @@ import { useContext, useCallback } from "react";
 import { loadEventsActionCreator } from "../store/actions/events/EventsActionsCreator";
 
 const useApi = () => {
-  const { dispatch } = useContext(EventsContext);
+  const {
+    store: { dispatch },
+  } = useContext(EventsContext);
 
   const apiKey = `apikey=${process.env.REACT_APP_API_KEY}`;
   const param = `${process.env.REACT_APP_API_PARAM}`;
