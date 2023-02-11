@@ -6,12 +6,14 @@ interface UiContextProviderProps {
   children: JSX.Element | JSX.Element[];
 }
 
-export const UiContextProvider = ({
+const UiContextProvider = ({
   children,
 }: UiContextProviderProps): JSX.Element => {
-  const [isLoading, dispatch] = useReducer(uiReducer, false);
+  const [isLoading, dispatch] = useReducer(uiReducer, true);
 
-  const value = useMemo(() => ({ isLoading, dispatch }), [isLoading, dispatch]);
+  const value = useMemo(() => ({ isLoading, dispatch }), [isLoading]);
 
   return <UiContext.Provider value={value}>{children}</UiContext.Provider>;
 };
+
+export default UiContextProvider;
