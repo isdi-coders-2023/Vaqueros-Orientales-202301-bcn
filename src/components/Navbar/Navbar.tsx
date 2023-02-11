@@ -7,7 +7,10 @@ const Navbar = (): JSX.Element => {
     <NavbarStyled className="navbar">
       <ul className="navbar-list">
         <li className="navbar-list-item">
-          <NavLink to="/">
+          <NavLink
+            className={({ isActive }) => (isActive ? "orange" : "grey")}
+            to="/"
+          >
             <i
               className="fa-solid fa-house-chimney"
               role="navigation"
@@ -16,22 +19,28 @@ const Navbar = (): JSX.Element => {
           </NavLink>
         </li>
         <li className="navbar-list-item">
-          <NavLink to="/create">
+          <NavLink
+            className={({ isActive }) => (isActive ? "orange" : "grey")}
+            to="/create"
+          >
             <i
-              className="fa-regular fa-plus"
+              className="fa-solid fa-plus"
               role="navigation"
               aria-label="Create an Event"
             ></i>
           </NavLink>
         </li>
         <li className="navbar-list-item">
-          <a href="myList">
+          <NavLink
+            className={({ isActive }) => (isActive ? "orange" : "grey")}
+            to="myList"
+          >
             <i
-              className="fa-regular fa-rectangle-list"
+              className="fa-solid fa-rectangle-list"
               role="navigation"
               aria-label="My Events List"
             ></i>
-          </a>
+          </NavLink>
         </li>
       </ul>
     </NavbarStyled>
