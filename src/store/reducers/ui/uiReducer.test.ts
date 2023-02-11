@@ -8,7 +8,6 @@ describe("Given the uiReducer", () => {
 
       const action: UiAction = {
         type: UiActionType.setLoading,
-        payload: initialState,
       };
 
       const newUiState = uiReducer(initialState, action);
@@ -24,7 +23,6 @@ describe("Given the uiReducer", () => {
 
       const action: UiAction = {
         type: UiActionType.unsetLoading,
-        payload: initialState,
       };
 
       const newUiState = uiReducer(initialState, action);
