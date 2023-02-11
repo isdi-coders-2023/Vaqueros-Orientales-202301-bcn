@@ -1,4 +1,5 @@
-import { EventsStructure } from "../data/types";
+import { EventsStructure, EventStructure } from "../data/types";
+import { EventsAction } from "../store/actions/events/types";
 import EventsContext from "../store/contexts/events/EventsContext";
 
 export interface MockContextProviderProps {
@@ -7,8 +8,12 @@ export interface MockContextProviderProps {
 }
 
 interface StoreStructure {
-  dispatch: React.Dispatch<any>;
-  events: EventsStructure;
+  store: {
+    events: EventsStructure;
+    dispatch: React.Dispatch<EventsAction>;
+    event: EventStructure;
+    detailDistpatch: React.Dispatch<EventsAction>;
+  };
 }
 
 const MockContextProvider = ({
