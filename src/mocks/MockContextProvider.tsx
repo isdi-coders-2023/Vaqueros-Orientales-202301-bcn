@@ -6,7 +6,7 @@ import UiContext from "../store/contexts/ui/UiContext";
 export interface MockContextProviderProps {
   children: JSX.Element | JSX.Element[];
   mockStore: StoreStructure;
-  uiMockStore: uiStoreStructure;
+  uiMockStore: UiStoreStructure;
 }
 
 interface StoreStructure {
@@ -18,7 +18,7 @@ interface StoreStructure {
   };
 }
 
-interface uiStoreStructure {
+interface UiStoreStructure {
   dispatch: React.Dispatch<any>;
   isLoading: boolean;
 }
