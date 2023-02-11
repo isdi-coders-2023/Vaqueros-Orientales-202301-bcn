@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import { EventStructure } from "../../data/types";
 import Event from "./Event";
 
@@ -32,7 +33,7 @@ describe("Given a Component Event", () => {
     test("Then it should show the title 'SuperBowl'", () => {
       const name = "SuperBowl";
 
-      render(<Event event={event} />);
+      render(<Event event={event} />, { wrapper: BrowserRouter });
 
       const info = screen.getByRole("heading", { name, level: 2 }).innerHTML;
 
@@ -40,7 +41,7 @@ describe("Given a Component Event", () => {
     });
 
     test("Then it should show an image with an alternative text that says 'SuperBowl'", () => {
-      render(<Event event={event} />);
+      render(<Event event={event} />, { wrapper: BrowserRouter });
 
       const info = screen.getByAltText(event.name);
 
@@ -52,7 +53,7 @@ describe("Given a Component Event", () => {
     test("Then it should show 'Phoenix'", () => {
       const city = "Phoenix";
 
-      render(<Event event={event} />);
+      render(<Event event={event} />, { wrapper: BrowserRouter });
 
       const info = screen.getByText(city);
 

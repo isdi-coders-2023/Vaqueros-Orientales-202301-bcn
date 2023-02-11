@@ -1,5 +1,6 @@
-import { EventsStructure } from "../data/types";
+import { EventsStructure, EventStructure } from "../data/types";
 import { UiAction } from "../store/actions/ui/types";
+import { EventsAction } from "../store/actions/events/types";
 import EventsContext from "../store/contexts/events/EventsContext";
 import UiContext from "../store/contexts/ui/UiContext";
 
@@ -10,8 +11,17 @@ export interface MockContextProviderProps {
 }
 
 interface StoreStructure {
-  dispatch: React.Dispatch<any>;
-  events: EventsStructure;
+  store: {
+    events: EventsStructure;
+    dispatch: React.Dispatch<EventsAction>;
+    event: EventStructure;
+    detailDispatch: React.Dispatch<EventsAction>;
+  };
+}
+
+interface uiStoreStructure {
+  dispatch: React.Dispatch<UiAction>;
+  isLoading: boolean;
 }
 
 interface uiStoreStructure {

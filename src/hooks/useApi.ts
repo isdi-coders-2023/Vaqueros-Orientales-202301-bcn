@@ -9,7 +9,9 @@ import {
 } from "../store/actions/ui/uiActionCreator";
 
 const useApi = () => {
-  const { dispatch } = useContext(EventsContext);
+  const {
+    store: { dispatch },
+  } = useContext(EventsContext);
   const { dispatch: uiDispatch } = useContext(UiContext);
 
   const apiKey = `apikey=${process.env.REACT_APP_API_KEY}`;
