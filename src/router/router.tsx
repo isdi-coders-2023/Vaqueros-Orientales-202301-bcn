@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
-import CreateEvent from "../pages/CreateEventPage/CreateEventPage";
+import CreateEventPage from "../pages/CreateEventPage/CreateEventPage";
 import DetailPage from "../pages/DetailPage/DetailPage";
 import HomePage from "../pages/HomePage/HomePage";
+import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 
 const router = createBrowserRouter([
   {
@@ -15,11 +16,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/create",
-        element: <CreateEvent />,
+        element: <CreateEventPage />,
       },
       {
         path: "/detail/:id",
         element: <DetailPage />,
+      },
+      {
+        path: "/*",
+        element: <NotFoundPage />,
       },
     ],
   },
