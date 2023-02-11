@@ -1,12 +1,6 @@
-import { RouterProvider } from "react-router-dom";
-import router from "./router/router";
-
+import Layaout from "./Layaout/Layaout";
 const App = (): JSX.Element => {
-  return (
-    <div className="container">
-      <RouterProvider router={router} />
-    </div>
-  );
+  return <Layaout />;
 };
 
 export default App;
