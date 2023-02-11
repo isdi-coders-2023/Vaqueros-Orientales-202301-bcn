@@ -1,11 +1,10 @@
-import Header from "./components/Header/Header";
-import HomePage from "./pages/HomePage/HomePage";
+import { RouterProvider } from "react-router-dom";
+import router from "./router/router";
 
 const App = (): JSX.Element => {
   return (
     <div className="container">
-      <Header />
-      <HomePage />
+      <RouterProvider router={router} />
     </div>
   );
 };
