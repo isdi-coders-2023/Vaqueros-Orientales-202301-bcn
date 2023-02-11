@@ -20,7 +20,7 @@ describe("Given the custom hook useApi", () => {
       } = renderHook(() => useApi(), {
         wrapper: ({ children }) => {
           return (
-            <MockContextProvider uiMockStore={uiStore} mockStore={store}>
+            <MockContextProvider mockStore={store} uiMockStore={uiStore}>
               {children}
             </MockContextProvider>
           );
