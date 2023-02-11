@@ -3,7 +3,12 @@ import { useParams } from "react-router";
 
 const DetailPage = () => {
   const { id } = useParams();
-  return <div>{id}</div>;
+  return (
+    <header>
+      <h1>EventInfo</h1>
+      <span>{id}</span>
+    </header>
+  );
 };
 
 export default DetailPage;
