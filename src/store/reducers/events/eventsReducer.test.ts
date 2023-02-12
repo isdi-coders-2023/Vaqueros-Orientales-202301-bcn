@@ -64,7 +64,44 @@ describe("Given the eventsReducer", () => {
 
       const newState = eventsReducer(initialState, action as LoadEventsAction);
 
-      expect(newState).toBe(initialState);
+      expect(newState).toStrictEqual(initialState);
+    });
+  });
+  describe("When it recieves the loadEvents action", () => {
+    test("Then it should return a new state with the list of events received", () => {
+      const initialState = [] as EventsStructure;
+      const action = {
+        type: EventsActionType.loadEvents as EventsActionType,
+        payload: [
+          {
+            name: "Cinema",
+            id: "",
+            type: "",
+            images: [
+              { url: "", ratio: "" },
+              { url: "", ratio: "" },
+              { url: "", ratio: "" },
+              { url: "", ratio: "" },
+              { url: "", ratio: "" },
+            ],
+            _embedded: {
+              venues: [
+                {
+                  name: "",
+                  city: { name: "" },
+                  country: { name: "" },
+                  address: { line1: "" },
+                },
+              ],
+            },
+            priceRanges: [{ min: 10 }],
+            dates: { start: { localDate: "", localTime: "" } },
+          },
+        ],
+      };
+
+      const newState = eventsReducer(initialState, action);
+      expect(newState).toStrictEqual(action.payload);
     });
   });
 });
