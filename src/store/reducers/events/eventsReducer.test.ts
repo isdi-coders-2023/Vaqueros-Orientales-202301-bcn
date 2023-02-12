@@ -64,7 +64,7 @@ describe("Given the eventsReducer", () => {
 
       const newState = eventsReducer(initialState, action as LoadEventsAction);
 
-      expect(newState).toBe(initialState);
+      expect(newState).toStrictEqual(initialState);
     });
   });
 });

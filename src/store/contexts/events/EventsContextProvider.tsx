@@ -12,6 +12,7 @@ const EventsContextProvider = ({
   children,
 }: EventsContextProviderProps): JSX.Element => {
   const [events, dispatch] = useReducer(eventsReducer, []);
+
   const [event, detailDistpatch] = useReducer(
     eventReducer,
     mockData as EventStructure
