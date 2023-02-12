@@ -22,12 +22,9 @@ const Navbar = (): JSX.Element => {
           <NavLink
             className={({ isActive }) => (isActive ? "orange" : "grey")}
             to="/create"
+            aria-label="Create an Event"
           >
-            <i
-              className="fa-solid fa-plus"
-              role="navigation"
-              aria-label="Create an Event"
-            ></i>
+            <i className="fa-solid fa-plus" role="navigation"></i>
           </NavLink>
         </li>
         <li className="navbar-list-item">
