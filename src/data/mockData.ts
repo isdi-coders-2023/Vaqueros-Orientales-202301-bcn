@@ -1,19 +1,19 @@
 export const mockData = {
-  name: "SuperBowl",
-  id: "0",
+  name: "",
+  id: "",
   type: "",
   images: [
     { url: "", ratio: "" },
     { url: "", ratio: "" },
     { url: "", ratio: "" },
     { url: "", ratio: "" },
-    { url: "beyonce.jpg", ratio: "" },
+    { url: "", ratio: "" },
   ],
   _embedded: {
     venues: [
       {
         name: "",
-        city: { name: "Phoenix" },
+        city: { name: "" },
         country: { name: "" },
         address: { line1: "" },
       },
