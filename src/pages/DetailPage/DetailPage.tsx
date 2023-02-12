@@ -20,7 +20,6 @@ const DetailPage = () => {
     <>
       {event && (
         <DetailPageStyled className="event-detail">
-          <h1>EventInfo</h1>
           <Title text="Event" description="Info" />
           <img src={event.images[4].url} alt={event.name} />
           <div className="event-detail__info">
