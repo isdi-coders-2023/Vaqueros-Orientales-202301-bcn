@@ -9,7 +9,7 @@ interface EventProps {
 const Event = ({ event }: EventProps): JSX.Element => {
   return (
     <EventStyled className="event">
-      <Link to={`/detail/:${event.id}`}>
+      <Link to={`/detail/${event.id}`}>
         <div className="card">
           <div className="card__container-image">
             <img

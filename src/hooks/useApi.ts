@@ -1,7 +1,10 @@
-import { ApiResponseStructure } from "../data/types";
+import { ApiResponseStructure, EventStructure } from "../data/types";
 import EventsContext from "../store/contexts/events/EventsContext";
 import { useContext, useCallback } from "react";
-import { loadEventsActionCreator } from "../store/actions/events/eventsActionsCreators";
+import {
+  loadEventActionCreator,
+  loadEventsActionCreator,
+} from "../store/actions/events/eventsActionsCreators";
 import UiContext from "../store/contexts/ui/UiContext";
 import {
   setLoadingActionCreator,
@@ -10,15 +13,14 @@ import {
 
 const useApi = () => {
   const {
-    store: { dispatch },
+    store: { dispatch, detailDistpatch },
   } = useContext(EventsContext);
   const { dispatch: uiDispatch } = useContext(UiContext);
 
   const apiKey = `apikey=${process.env.REACT_APP_API_KEY}`;
   const param = `${process.env.REACT_APP_API_PARAM}`;
   const country = `&countryCode=ES`;
-  const url = `${process.env.REACT_APP_URL_API!}${param}${apiKey}${country}`;
-
+  let url = `${process.env.REACT_APP_URL_API!}${param}${apiKey}${country}`;
   const loadEvents = useCallback(async () => {
     try {
       uiDispatch(setLoadingActionCreator());
@@ -34,7 +36,24 @@ const useApi = () => {
     }
   }, [dispatch, url, uiDispatch]);
 
-  return { loadEvents };
+  const loadEvent = useCallback(
+    async (id: string) => {
+      const category = `${process.env.REACT_APP_CATEGORY}`;
+      const format = `${process.env.REACT_APP_FORMAT}`;
+      let urlDetail = `${process.env
+        .REACT_APP_URL_API!}${category}${id}${format}${apiKey}`;
+      try {
+        const result = await fetch(urlDetail);
+        const event = (await result.json()) as EventStructure;
+        detailDistpatch(loadEventActionCreator(event));
+      } catch (error: unknown) {
+        return (error as Error).message;
+      }
+    },
+    [detailDistpatch, apiKey]
+  );
+
+  return { loadEvents, loadEvent };
 };
 
 export default useApi;
