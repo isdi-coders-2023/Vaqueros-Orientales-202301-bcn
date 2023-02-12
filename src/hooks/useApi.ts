@@ -41,7 +41,7 @@ const useApi = () => {
       const category = `${process.env.REACT_APP_CATEGORY}`;
       const format = `${process.env.REACT_APP_FORMAT}`;
       let urlDetail = `${process.env
-        .REACT_APP_URL_API!}${category}${id}${format}${apiKey}`;
+        .REACT_APP_URL_DETAIL!}${category}${id}${format}${apiKey}`;
       try {
         const result = await fetch(urlDetail);
         const event = (await result.json()) as EventStructure;
