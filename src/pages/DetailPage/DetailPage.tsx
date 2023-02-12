@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router";
+import Title from "../../components/Title/Title";
 import useApi from "../../hooks/useApi";
 import EventsContext from "../../store/contexts/events/EventsContext";
 import DetailPageStyled from "./DetailPageStyled";
@@ -20,6 +21,7 @@ const DetailPage = () => {
       {event && (
         <DetailPageStyled className="event-detail">
           <h1>EventInfo</h1>
+          <Title text="Event" description="Info" />
           <img src={event.images[4].url} alt={event.name} />
           <div className="event-detail__info">
             <h2 className="event-detail__title">{event.name}</h2>

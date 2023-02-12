@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import EventsList from "../../components/EventsList/EventsList";
+import Title from "../../components/Title/Title";
 
 import useApi from "../../hooks/useApi";
 import EventsContext from "../../store/contexts/events/EventsContext";
@@ -21,7 +22,7 @@ const HomePage = (): JSX.Element => {
   return (
     <>
       <HomePageStyled>
-        <h1 className="title">FindEvents</h1>
+        <Title text="Find" description="Events" />
       </HomePageStyled>
       <div className="grid-container">
         <EventsList events={filterdeData} />;
