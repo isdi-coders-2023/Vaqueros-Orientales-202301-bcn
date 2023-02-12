@@ -9,9 +9,15 @@ const NavbarStyled = styled.nav`
 
         &-item i {
           font-size: 3rem;
-          color: #cd4631;
         }
       }
+    }
+    .orange {
+      color: #cd4631;
+    }
+
+    .grey {
+      color: #777;
     }
   }
 
