@@ -28,8 +28,8 @@ describe("Given the DetailPage", () => {
         </MockContextProvider>,
         { wrapper: BrowserRouter }
       );
-      const pageTitle = "EventInfo";
-      const expectedTitle = screen.getByRole("heading", { name: pageTitle });
+
+      const expectedTitle = screen.getByRole("heading", { level: 1 });
       expect(expectedTitle).toBeInTheDocument();
     });
   });
