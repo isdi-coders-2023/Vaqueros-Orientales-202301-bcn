@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-const FormStyled = styled.div`
+const FormStyled = styled.form`
   background-color: #edf3f7;
-
   min-height: 100vh;
   padding: 2rem;
   text-align: left;

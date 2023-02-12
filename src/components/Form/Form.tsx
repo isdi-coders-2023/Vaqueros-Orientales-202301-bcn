@@ -4,7 +4,7 @@ export const Form = (): JSX.Element => {
   return (
     <>
       <FormStyled className="create-form">
-        <p className="form__info">Tell us about your Event</p>
+        <h2 className="form__info">Tell us about your Event</h2>
         <form action="" className="form" aria-label="create an event">
           <label htmlFor="typeofevent">Type of event</label>
           <select name="select1">
