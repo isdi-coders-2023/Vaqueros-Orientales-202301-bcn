@@ -43,14 +43,19 @@ const useApi = () => {
       let urlDetail = `${process.env
         .REACT_APP_URL_DETAIL!}${category}${id}${format}${apiKey}`;
       try {
+        uiDispatch(setLoadingActionCreator());
+
         const result = await fetch(urlDetail);
         const event = (await result.json()) as EventStructure;
+
+        uiDispatch(unsetLoadingActionCreator());
+
         detailDistpatch(loadEventActionCreator(event));
       } catch (error: unknown) {
         return (error as Error).message;
       }
     },
-    [detailDistpatch, apiKey]
+    [detailDistpatch, apiKey, uiDispatch]
   );
 
   return { loadEvents, loadEvent };
