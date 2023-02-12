@@ -2,13 +2,15 @@ import styled from "styled-components";
 
 const FormStyled = styled.div`
   background-color: #edf3f7;
-  min-height: 100%;
-  padding: 20px;
+
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: left;
 
   .form {
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold;
 
     &__info {
@@ -18,7 +20,7 @@ const FormStyled = styled.div`
     }
 
     & label {
-      padding: 5px 5px 5px 0;
+      padding: 0.5rem 0.5rem 0.5rem 0;
     }
 
     & input,
@@ -27,8 +29,8 @@ const FormStyled = styled.div`
       border: 1px solid black;
       border-radius: 4px;
       font-size: 1.4rem;
-      padding: 5px;
-      margin-bottom: 10px;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     & .form__button {
