@@ -3,8 +3,6 @@ import styled from "styled-components";
 const EventStyled = styled.article`
   .card {
     max-width: 32rem;
-    /* min-height: 35rem; */
-    /* padding: 2rem; */
     display: flex;
     justify-content: center;
     flex-direction: column;
