@@ -1,7 +1,7 @@
 import { Form } from "../../components/Form/Form";
 import CreateEventStyled from "./CreateEventStyled";
 
-const CreateEvent = (): JSX.Element => {
+const CreateEventPage = (): JSX.Element => {
   return (
     <>
       <CreateEventStyled className="create">
@@ -15,4 +15,4 @@ const CreateEvent = (): JSX.Element => {
   );
 };
 
-export default CreateEvent;
+export default CreateEventPage;
