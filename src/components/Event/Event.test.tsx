@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { EventStructure } from "../../data/types";
+import EventsContextProvider from "../../store/contexts/events/EventsContextProvider";
 import Event from "./Event";
 
 const event: EventStructure = {
@@ -33,7 +34,12 @@ describe("Given a Component Event", () => {
     test("Then it should show the title 'SuperBowl'", () => {
       const name = "SuperBowl";
 
-      render(<Event event={event} />, { wrapper: BrowserRouter });
+      render(
+        <EventsContextProvider>
+          <Event event={event} />
+        </EventsContextProvider>,
+        { wrapper: BrowserRouter }
+      );
 
       const info = screen.getByRole("heading", { name, level: 2 }).innerHTML;
 
