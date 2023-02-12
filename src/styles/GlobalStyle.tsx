@@ -40,6 +40,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+
+  img{
+    max-width: 100%;
+  }
 `;
 
 export default GlobalStyle;
