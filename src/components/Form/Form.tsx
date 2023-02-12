@@ -15,14 +15,30 @@ export const Form = (): JSX.Element => {
           <input
             type="text"
             id="nameoftheevent"
+            aria-label="name of the Event"
             placeholder="Name of the Event"
           />
           <label htmlFor="photo">Photo</label>
-          <input type="text" id="photo" placeholder="Photo" />
+          <input
+            type="text"
+            id="photo"
+            placeholder="Photo"
+            aria-label="photo"
+          />
           <label htmlFor="location">Location</label>
-          <input type="text" id="location" placeholder="Location" />
+          <input
+            type="text"
+            id="location"
+            placeholder="Location"
+            aria-label="location"
+          />
           <label htmlFor="price">Price</label>
-          <input type="text" id="price" placeholder="Price" />
+          <input
+            type="text"
+            id="price"
+            placeholder="Price"
+            arial-label="price"
+          />
           <button className="form__button" type="submit">
             Create Event
           </button>
