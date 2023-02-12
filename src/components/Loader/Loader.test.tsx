@@ -1,5 +1,6 @@
 import { Loader } from "./Loader";
 import { render, screen } from "@testing-library/react";
+import UiContextProvider from "../../store/contexts/ui/UiContextProvider";
 
 describe("Given the Loader component", () => {
   describe("When it is rendered", () => {
@@ -16,7 +17,11 @@ describe("Given the Loader component", () => {
   test("Then it should render a loader wit the aria-role 'status'", () => {
     const ariaRole = "status";
 
-    render(<Loader />);
+    render(
+      <UiContextProvider>
+        <Loader />
+      </UiContextProvider>
+    );
 
     const expectedResult = screen.getByRole(ariaRole);
 
