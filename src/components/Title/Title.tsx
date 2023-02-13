@@ -1,4 +1,3 @@
-import React from "react";
 import TitleStyled from "./TitleStyled";
 
 interface TitleProps {
