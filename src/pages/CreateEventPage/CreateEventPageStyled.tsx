@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const CreateEventStyled = styled.section`
+const CreateEventPageStyled = styled.section`
   text-align: center;
   font-size: 3rem;
   margin-bottom: 5rem;
@@ -18,4 +18,4 @@ const CreateEventStyled = styled.section`
   }
 `;
 
-export default CreateEventStyled;
+export default CreateEventPageStyled;

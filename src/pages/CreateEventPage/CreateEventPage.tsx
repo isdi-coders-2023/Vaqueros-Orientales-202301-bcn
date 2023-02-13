@@ -1,18 +1,16 @@
 import { Form } from "../../components/Form/Form";
-import CreateEventStyled from "./CreateEventStyled";
+import CreateEventPageStyled from "./CreateEventPageStyled";
 
-const CreateEvent = (): JSX.Element => {
+const CreateEventPage = (): JSX.Element => {
   return (
-    <>
-      <CreateEventStyled className="create">
-        <h1 className="create__title">
-          Create<span className="create__accent"> your Event</span>
-        </h1>
-
-        <Form />
-      </CreateEventStyled>
-    </>
+    <CreateEventPageStyled className="create-event-page">
+      <h1 className="create-event-page__title">
+        Create
+        <span className="create-event-page__title--accent"> your Event</span>
+      </h1>
+      <Form />
+    </CreateEventPageStyled>
   );
 };
 
-export default CreateEvent;
+export default CreateEventPage;
