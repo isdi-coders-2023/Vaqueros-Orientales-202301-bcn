@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a App Component When it render a CreateEventPage Then it should show a CreateEventPage 1`] = `
+<section
+  className="sc-gswNZR cxMGxl create"
+>
+  <h1
+    className="create__title"
+  >
+    Create
+    <span
+      className="create__accent"
+    >
+      your Event
+    </span>
+  </h1>
+  <form
+    aria-label="create an event"
+    className="sc-bcXHqe iFcHgu form"
+  >
+    <h2
+      className="form__info"
+    >
+      Tell us about your Event
+    </h2>
+    <label
+      htmlFor="typeofevent"
+    >
+      Type of event
+    </label>
+    <select
+      name="select1"
+    >
+      <option
+        value="music"
+      >
+        Music
+      </option>
+      <option
+        value="sports"
+      >
+        Sports
+      </option>
+    </select>
+    <label
+      htmlFor="nameoftheevent"
+    >
+      Name of the Event
+    </label>
+    <input
+      aria-label="name of the Event"
+      id="nameoftheevent"
+      placeholder="Name of the Event"
+      type="text"
+    />
+    <label
+      htmlFor="photo"
+    >
+      Photo
+    </label>
+    <input
+      aria-label="photo"
+      id="photo"
+      placeholder="Photo"
+      type="text"
+    />
+    <label
+      htmlFor="location"
+    >
+      Location
+    </label>
+    <input
+      aria-label="location"
+      id="location"
+      placeholder="Location"
+      type="text"
+    />
+    <label
+      htmlFor="price"
+    >
+      Price
+    </label>
+    <input
+      arial-label="price"
+      id="price"
+      placeholder="Price"
+      type="text"
+    />
+    <button
+      className="form__button"
+      type="submit"
+    >
+      Create Event
+    </button>
+  </form>
+</section>
+`;
+
+exports[`Given a App Component When it render a CreateEventPage Then it should show a CreateEventPage 2`] = `
+<section
+  className="sc-dkrFOg iBXLwH error"
+>
+  <h2
+    className="error__number"
+  >
+    4
+    <span
+      className="error__accent"
+    >
+      0
+    </span>
+    4
+  </h2>
+  <p
+    className="error__message"
+  >
+    Something went 
+    <span
+      className="error__accent"
+    >
+      wrong
+    </span>
+  </p>
+  <p
+    className="error__message"
+  >
+    Please, try again later
+  </p>
+</section>
+`;
+
+exports[`Given a App Component When it try to render a not existing page Then it should show a NotFoundPage 1`] = `
+<section
+  className="sc-dkrFOg iBXLwH error"
+>
+  <h2
+    className="error__number"
+  >
+    4
+    <span
+      className="error__accent"
+    >
+      0
+    </span>
+    4
+  </h2>
+  <p
+    className="error__message"
+  >
+    Something went 
+    <span
+      className="error__accent"
+    >
+      wrong
+    </span>
+  </p>
+  <p
+    className="error__message"
+  >
+    Please, try again later
+  </p>
+</section>
+`;
+
+exports[`Given a router When it render a App Component Then it should show a HomePage 1`] = `
+<section
+  className="sc-gswNZR cxMGxl create"
+>
+  <h1
+    className="create__title"
+  >
+    Create
+    <span
+      className="create__accent"
+    >
+      your Event
+    </span>
+  </h1>
+  <form
+    aria-label="create an event"
+    className="sc-bcXHqe iFcHgu form"
+  >
+    <h2
+      className="form__info"
+    >
+      Tell us about your Event
+    </h2>
+    <label
+      htmlFor="typeofevent"
+    >
+      Type of event
+    </label>
+    <select
+      name="select1"
+    >
+      <option
+        value="music"
+      >
+        Music
+      </option>
+      <option
+        value="sports"
+      >
+        Sports
+      </option>
+    </select>
+    <label
+      htmlFor="nameoftheevent"
+    >
+      Name of the Event
+    </label>
+    <input
+      aria-label="name of the Event"
+      id="nameoftheevent"
+      placeholder="Name of the Event"
+      type="text"
+    />
+    <label
+      htmlFor="photo"
+    >
+      Photo
+    </label>
+    <input
+      aria-label="photo"
+      id="photo"
+      placeholder="Photo"
+      type="text"
+    />
+    <label
+      htmlFor="location"
+    >
+      Location
+    </label>
+    <input
+      aria-label="location"
+      id="location"
+      placeholder="Location"
+      type="text"
+    />
+    <label
+      htmlFor="price"
+    >
+      Price
+    </label>
+    <input
+      arial-label="price"
+      id="price"
+      placeholder="Price"
+      type="text"
+    />
+    <button
+      className="form__button"
+      type="submit"
+    >
+      Create Event
+    </button>
+  </form>
+</section>
+`;
+
+exports[`My app renders correctly 1`] = `
+<section
+  className="sc-eDvSVe gFdrnr create"
+>
+  <h1
+    className="create__title"
+  >
+    Create
+    <span
+      className="create__accent"
+    >
+      your Event
+    </span>
+  </h1>
+  <form
+    aria-label="create an event"
+    className="sc-hLBbgP ijHvVo form"
+  >
+    <h2
+      className="form__info"
+    >
+      Tell us about your Event
+    </h2>
+    <label
+      htmlFor="typeofevent"
+    >
+      Type of event
+    </label>
+    <select
+      name="select1"
+    >
+      <option
+        value="music"
+      >
+        Music
+      </option>
+      <option
+        value="sports"
+      >
+        Sports
+      </option>
+    </select>
+    <label
+      htmlFor="nameoftheevent"
+    >
+      Name of the Event
+    </label>
+    <input
+      aria-label="name of the Event"
+      id="nameoftheevent"
+      placeholder="Name of the Event"
+      type="text"
+    />
+    <label
+      htmlFor="photo"
+    >
+      Photo
+    </label>
+    <input
+      aria-label="photo"
+      id="photo"
+      placeholder="Photo"
+      type="text"
+    />
+    <label
+      htmlFor="location"
+    >
+      Location
+    </label>
+    <input
+      aria-label="location"
+      id="location"
+      placeholder="Location"
+      type="text"
+    />
+    <label
+      htmlFor="price"
+    >
+      Price
+    </label>
+    <input
+      arial-label="price"
+      id="price"
+      placeholder="Price"
+      type="text"
+    />
+    <button
+      className="form__button"
+      type="submit"
+    >
+      Create Event
+    </button>
+  </form>
+</section>
+`;
