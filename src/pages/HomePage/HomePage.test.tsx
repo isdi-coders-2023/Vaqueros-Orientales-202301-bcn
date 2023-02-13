@@ -4,13 +4,16 @@ import HomePage from "../HomePage/HomePage";
 
 describe("Given the Home page", () => {
   describe("When it renders", () => {
-    test("Then it should show a heading", () => {
+    test("Then it should show the heading Find Events", () => {
+      const heading = "Find Events";
+
       render(
         <EventsContextProvider>
           <HomePage />
         </EventsContextProvider>
       );
-      const title = screen.getByRole("heading");
+      const title = screen.getByRole("heading", { name: heading });
+
       expect(title).toBeInTheDocument();
     });
   });

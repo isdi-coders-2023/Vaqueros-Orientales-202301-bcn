@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../Layout/Layout";
+import App from "../App";
 import CreateEventPage from "../pages/CreateEventPage/CreateEventPage";
 import DetailPage from "../pages/DetailPage/DetailPage";
 import HomePage from "../pages/HomePage/HomePage";
@@ -8,7 +8,7 @@ import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <App />,
     children: [
       {
         path: "/",
@@ -22,11 +22,9 @@ const router = createBrowserRouter([
         path: "/detail/:id",
         element: <DetailPage />,
       },
-      {
-        path: "/*",
-        element: <NotFoundPage />,
-      },
     ],
+
+    errorElement: <NotFoundPage />,
   },
 ]);
 
