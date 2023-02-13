@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import Navbar from "./Navbar";
+import NavigationBar from "./Navbar";
 
 describe("Given a Navbar Component", () => {
   describe("When it renders with a list of 3 icons", () => {
@@ -8,7 +8,7 @@ describe("Given a Navbar Component", () => {
       render(
         <>
           <BrowserRouter>
-            <Navbar />
+            <NavigationBar />
           </BrowserRouter>
         </>
       );
@@ -24,7 +24,7 @@ describe("Given a Navbar Component", () => {
       render(
         <>
           <BrowserRouter>
-            <Navbar />
+            <NavigationBar />
           </BrowserRouter>
         </>
       );
@@ -40,7 +40,7 @@ describe("Given a Navbar Component", () => {
       render(
         <>
           <BrowserRouter>
-            <Navbar />
+            <NavigationBar />
           </BrowserRouter>
         </>
       );
@@ -56,7 +56,7 @@ describe("Given a Navbar Component", () => {
       render(
         <>
           <BrowserRouter>
-            <Navbar />
+            <NavigationBar />
           </BrowserRouter>
         </>
       );

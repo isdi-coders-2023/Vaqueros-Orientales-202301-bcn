@@ -30,7 +30,7 @@ const Navbar = (): JSX.Element => {
         <li className="navbar-list-item">
           <NavLink
             className={({ isActive }) => (isActive ? "orange" : "grey")}
-            to="myList"
+            to="my-list"
           >
             <i
               className="fa-solid fa-rectangle-list"
